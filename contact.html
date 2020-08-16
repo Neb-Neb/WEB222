@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB222 Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&family=Raleway:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+	<script src="contact.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <header class="menu">
+        <a href="index.html" class="menu_header" id="menu_0"><h1>Ethereal's Workshop</h1></a>
+        <nav>
+          <ul>
+            <li><a href="index.html" id="menu_1">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <header class="header_design"></header>
+    </div>
+    <div class="body" id="body">
+      <img class="intro_image1" src="images/computer_intro.jpg" />
+      <img class="intro_image2" src="images/gpu_intro.jpg" />
+      <h2 class="header_content">CONTACT US</h2>
+      <h6 class="header_content">UNLIMITED, ENDLESS,<br />ONLY AT ETHEREAL'S WORKSHOP.<br /></h6>
+      <div class="header_content">
+        Fill out the following information and we will get in touch as soon as possible.
+      </div>
+      <hr />
+    </div>
+	
+	<form
+	  action="https://httpbin.org/post"
+	  method="POST"
+	>
+	  <label>
+		Name:
+	  <input type="text" name="myName" required>
+	  </label>
+	  <br><br>
+	  <label>
+		Email:
+		<input type="text" name="myEmail" required>
+	  </label>
+	  <br><br>
+	  <label>
+		Address:
+		<input type="text" name="myAddress" required>
+	  </label>
+	  <br><br>
+	  <label for="myCity">City:</label>
+		<input type="text" name="myCity" list="cityList" required>
+		<datalist id="cityList">
+			<option>Toronto</option>
+			<option>Vancouver</option>
+			<option>Montreal</option>
+			<option>Niagara Falls</option>
+			<option>Victoria</option>
+			<option>Halifax</option>
+			<option>Quebec City</option>
+			<option>Calgary</option>
+			<option>Ottawa</option>
+			<option>Edmonton</option>
+		</datalist>
+	  <br><br>
+	  <label>
+		Postal code:
+		<input type="text" name="myPostal" pattern="[A-Za-z0-9]{6,7}" required>
+	  </label>
+	  <br><br>
+	  <label>
+		Specify Category:
+	  </label>
+	  <select id="categoryList">
+		<option label="Question" id="myQuestion"></option>
+		<option label="Comment" id="myComment"></option>
+		<option label="Order Problem" id="myProblem"></option>
+	  </select>
+	  <br><br>
+	  <label id="labelProblem" hidden>
+		Problem:
+		<textarea name="messageProblem" id="messageProblem" placeholder="Provide any problems or concerns"></textarea>
+	  </label>
+	  <br><br>
+	  <label>
+		Message:
+		<textarea name="messageExtra" placeholder="Provide additional comments" required></textarea>
+	  </label>
+		<input type="text" name="hiddenText" value="Tommy Nguyen" hidden>
+
+	  <button type="submit">Send</button>
+	</form>
+	
+	<hr />
+    <footer class="footer">
+	<form action="https://formspree.io/mnqgrypg" method="POST" class="form">
+		<label>
+			Email:
+			<input type="text" name="myEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+		</label>
+
+		<button type="submit">Subsribe</button>
+	</form>
+      <p>Tommy Nguyen</p>
+      <p>
+        <a href="#"><img src="images/ig.png" class="footer"/></a>
+      </p>
+    </footer>
+  </body>
+</html>
